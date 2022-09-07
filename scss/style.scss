@@ -1,0 +1,42 @@
+@import './variables';
+
+body {
+    background-image: url(../images/sunset.png);
+}
+
+.navbar {
+    a {
+    font-size: 30px;
+    }
+}
+
+header {
+
+    p {
+        @include borderGlow;
+    }
+}
+
+.container {
+    text-align: center;
+}
+
+#inputBar {
+    border: none;
+    background-color: rgba($color: #ffffff, $alpha: 0.4);
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+}
+
+#about {
+    @include borderGlow;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: white;
+}

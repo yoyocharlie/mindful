@@ -1,0 +1,37 @@
+body {
+  background-image: url(../images/sunset.png);
+}
+
+.navbar a {
+  font-size: 30px;
+}
+
+header p {
+  box-shadow: 5px 5px 50px rgb(223, 114, 81);
+  border-radius: 10px;
+}
+
+.container {
+  text-align: center;
+}
+
+#inputBar {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  outline: none;
+  font-size: 20px;
+}
+
+#about {
+  box-shadow: 5px 5px 50px rgb(223, 114, 81);
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
