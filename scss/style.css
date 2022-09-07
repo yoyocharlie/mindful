@@ -5,6 +5,9 @@ body {
 .navbar a {
   font-size: 30px;
 }
+.navbar #logo {
+  border: 1px solid white;
+}
 
 header p {
   box-shadow: 5px 5px 50px rgb(223, 114, 81);
