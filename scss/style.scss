@@ -57,10 +57,27 @@ footer {
     color: white;
 }
 
+.centerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quoteContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 400px;
+    text-align: center;
+}
+
 #quote {
     color: white;
     font-size: 2em;
+    max-width: 70%;
 }
+
 #author {
     color: white;
     font-size: 2em;
@@ -68,4 +85,8 @@ footer {
 
 .noDisplay {
     display: none;
+}
+
+.fadeIn {
+    animation: fadeInAnimation ease 5s;
 }
