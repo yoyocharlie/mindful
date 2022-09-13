@@ -60,4 +60,18 @@ footer {
   width: 100%;
   bottom: 0;
   color: white;
+}
+
+#quote {
+  color: white;
+  font-size: 2em;
+}
+
+#author {
+  color: white;
+  font-size: 2em;
+}
+
+.noDisplay {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
