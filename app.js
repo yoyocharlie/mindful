@@ -1,6 +1,5 @@
 $(document).ready(function() {
-    const inputBar = $('#inputBar');
-    const inputValue = $('#inputBar').value;
+    const inputBar = $('#inputBar');;
     const introPrompt = $('#introPrompt');
     const submit = $('#submitBtn');
     const quoteSpace = $('#quote');
@@ -21,14 +20,22 @@ $(document).ready(function() {
     }
 
     submit.click((e) => {
+        const inputValue = inputBar.val();
+
         e.preventDefault();
-        introPrompt.slideUp(2000);
-        quoteSpace.removeClass('noDisplay');
-        inputBar.fadeOut(2000);
-        submit.fadeOut(2000);
-        generateQuote();
-        quoteSpace.addClass('fadeIn');
-        authors.addClass('fadeIn');
+
+        if(inputValue.length < 3) {
+            invalid.text('*please enter feelings')
+        } else {
+            introPrompt.slideUp(2000);
+            quoteSpace.removeClass('noDisplay');
+            inputBar.fadeOut(2000);
+            submit.fadeOut(2000);
+            invalid.fadeOut(500);
+            generateQuote();
+            quoteSpace.addClass('fadeIn');
+            authors.addClass('fadeIn');
+        }
     });
 });
 
