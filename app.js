@@ -5,14 +5,17 @@ $(document).ready(function() {
     const submit = $('#submitBtn');
     const quoteSpace = $('#quote');
     const authors = $('#author');
+    const invalid = $('#invalid');
     
 
     function generateQuote() {
         fetch('https://type.fit/api/quotes')
         .then((response) => response.json())
         .then((data) => {
-            quoteSpace[0].innerHTML = `"` + data[Math.floor(Math.random() * data.length)].text + `"`
-            //authors.innerHTML = `-` + data[Math.floor(Math.random() * data.length)].author
+            let randomQuote = data[Math.floor(Math.random() * data.length)]
+
+            quoteSpace[0].innerHTML = `"` + randomQuote.text + `"`;
+            authors[0].innerHTML = `- ` + randomQuote.author;
         })
         .catch((err) => console.log(err));
     }
@@ -24,11 +27,8 @@ $(document).ready(function() {
         inputBar.fadeOut(2000);
         submit.fadeOut(2000);
         generateQuote();
-        quoteSpace.addClass('fadeIn')
+        quoteSpace.addClass('fadeIn');
+        authors.addClass('fadeIn');
     });
+});
 
-    inputBar.click(() => {
-        introPrompt.slideDown(2000);
-        quoteSpace.addClass('noDisplay');
-    });
-})

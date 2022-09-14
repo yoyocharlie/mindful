@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 body {
   background-image: url(../images/sunset.png);
   -webkit-animation: fadeInAnimation ease 3s;
@@ -72,8 +73,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: fixed;
-  bottom: 400px;
+  bottom: 450px;
+  max-height: 40px;
   text-align: center;
 }
 
@@ -81,11 +84,16 @@ footer {
   color: white;
   font-size: 2em;
   max-width: 70%;
+  font-family: "Comfortaa", cursive;
+  font-size: 25px;
 }
 
 #author {
   color: white;
   font-size: 2em;
+  font-family: "Comfortaa", cursive;
+  padding-top: 40px;
+  font-size: 20px;
 }
 
 .noDisplay {
