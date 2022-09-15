@@ -31,6 +31,7 @@ body {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 0;
+  background: rgba(128, 144, 197, 0.3647058824);
 }
 .navbar a {
   font-size: 25px;
