@@ -18,6 +18,7 @@
 body {
   background: rgb(70, 51, 59);
   background: linear-gradient(0deg, rgb(236, 191, 161) 1%, rgb(168, 184, 226) 89%, rgb(148, 187, 233) 100%);
+  background-repeat: no-repeat;
   -webkit-animation: fadeInAnimation ease 3s;
           animation: fadeInAnimation ease 3s;
   -webkit-animation-iteration-count: 1;
@@ -31,7 +32,7 @@ body {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 0;
-  background: rgba(128, 144, 197, 0.3647058824);
+  background: #8090c5;
 }
 .navbar a {
   font-size: 25px;
