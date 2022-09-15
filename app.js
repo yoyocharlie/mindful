@@ -11,10 +11,18 @@ $(document).ready(function() {
         fetch('https://type.fit/api/quotes')
         .then((response) => response.json())
         .then((data) => {
-            let randomQuote = data[Math.floor(Math.random() * data.length)]
+            let mappedData = data.map(obj => obj.text);
+            let mappedQuote = mappedData.filter(function(text){
+                const inputValue = inputBar.val();
+                return text.includes(inputValue);
+            });
+            let randomQuote = mappedQuote[Math.floor(Math.random() * mappedQuote.length)];
 
-            quoteSpace[0].innerHTML = `"` + randomQuote.text + `"`;
-            authors[0].innerHTML = `- ` + randomQuote.author;
+            if(randomQuote == undefined){
+                quoteSpace.html('It seems your feelings are too complex for our site. Try again :)')
+            } else {
+            quoteSpace.html(`"${randomQuote}"`)
+            }
         })
         .catch((err) => console.log(err));
     }
@@ -24,7 +32,7 @@ $(document).ready(function() {
 
         e.preventDefault();
 
-        if(inputValue.length < 3) {
+        if(inputValue == 0) {
             invalid.text('*please enter feelings')
         } else {
             introPrompt.slideUp(2000);
@@ -36,6 +44,7 @@ $(document).ready(function() {
             quoteSpace.addClass('fadeIn');
             authors.addClass('fadeIn');
         }
+        
     });
 });
 
