@@ -11,10 +11,10 @@ $(document).ready(function() {
         fetch('https://type.fit/api/quotes')
         .then((response) => response.json())
         .then((data) => {
-            let mappedData = data.map(obj => obj.text);
+            let mappedData = data.map(obj=> obj.text);
             let mappedQuote = mappedData.filter(function(text){
                 const inputValue = inputBar.val();
-                return text.includes(inputValue);
+                return text.includes(inputValue.toLowerCase());
             });
             let randomQuote = mappedQuote[Math.floor(Math.random() * mappedQuote.length)];
 
