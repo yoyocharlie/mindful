@@ -18,11 +18,9 @@ $(document).ready(function() {
             });
             let randomQuote = mappedQuote[Math.floor(Math.random() * mappedQuote.length)];
 
-            if(randomQuote == undefined){
-                quoteSpace.html('It seems your feelings are too complex for our site. Try again :)')
-            } else {
-            quoteSpace.html(`"${randomQuote}"`)
-            }
+            return randomQuote == undefined ? 
+            quoteSpace.html('It seems your feelings are too complex for our site. Try again :)')
+            : quoteSpace.html(`"${randomQuote}"`);
         })
         .catch((err) => console.log(err));
     }
@@ -33,7 +31,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         if(inputValue.length < 3) {
-            invalid.text('*please enter feelings')
+            invalid.text('*please enter feelings');
         } else {
             introPrompt.slideUp(2000);
             quoteSpace.removeClass('noDisplay');
@@ -43,8 +41,7 @@ $(document).ready(function() {
             generateQuote();
             quoteSpace.addClass('fadeIn');
             authors.addClass('fadeIn');
-        }
-        
+        };   
     });
 });
 
