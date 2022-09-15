@@ -16,10 +16,6 @@
   }
 }
 html {
-  height: 100vh;
-}
-
-body {
   background: linear-gradient(0deg, rgb(236, 191, 161) 1%, rgb(168, 184, 226) 89%, rgb(148, 187, 233) 100%);
   -webkit-animation: fadeInAnimation ease 3s;
           animation: fadeInAnimation ease 3s;
@@ -27,6 +23,12 @@ body {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+body {
+  background-color: unset !important;
   height: 100vh;
 }
 

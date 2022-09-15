@@ -1,14 +1,16 @@
 @import './variables';
 
 html {
-    height: 100vh;
-}
-
-body {
     background: linear-gradient(0deg, rgb(236, 191, 161) 1%, rgba(168,184,226,1) 89%, rgba(148,187,233,1) 100%);
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    background-color: unset !important;
     height: 100vh;
 }
 
