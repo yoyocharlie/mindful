@@ -9,16 +9,10 @@ body {
     height: 100vh;
 }
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
-
 .navbar {
+    position: sticky !important;
+    top: 0;
+
     a {
     font-size: 25px;
     }
@@ -60,15 +54,11 @@ footer {
 }
 
 .centerContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
 }
 
 .quoteContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     flex-direction: column;
     position: fixed;
     bottom: 380px;
