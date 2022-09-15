@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 body {
-  background-image: url(../images/sunset.png);
+  background: rgb(70, 51, 59);
+  background: linear-gradient(0deg, rgb(236, 191, 161) 1%, rgb(168, 184, 226) 89%, rgb(148, 187, 233) 100%);
   -webkit-animation: fadeInAnimation ease 3s;
           animation: fadeInAnimation ease 3s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  height: 100vh;
 }
 
 @-webkit-keyframes fadeInAnimation {
@@ -27,14 +29,14 @@ body {
   }
 }
 .navbar a {
-  font-size: 30px;
+  font-size: 25px;
 }
 .navbar #logo {
   border: 1px solid white;
 }
 
 header p {
-  box-shadow: 5px 5px 50px rgb(223, 114, 81);
+  box-shadow: 5px 5px 50px rgb(250, 208, 117);
   border-radius: 10px;
 }
 
@@ -51,7 +53,7 @@ header p {
 }
 
 #about {
-  box-shadow: 5px 5px 50px rgb(223, 114, 81);
+  box-shadow: 5px 5px 50px rgb(250, 208, 117);
   border-radius: 10px;
 }
 

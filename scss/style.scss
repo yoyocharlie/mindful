@@ -1,10 +1,12 @@
 @import './variables';
 
 body {
-    background-image: url(../images/sunset.png);
+    background: rgb(70, 51, 59);
+    background: linear-gradient(0deg, rgb(236, 191, 161) 1%, rgba(168,184,226,1) 89%, rgba(148,187,233,1) 100%);
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    height: 100vh;
 }
 
 @keyframes fadeInAnimation {
@@ -18,7 +20,7 @@ body {
 
 .navbar {
     a {
-    font-size: 30px;
+    font-size: 25px;
     }
 
     #logo {
