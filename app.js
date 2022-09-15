@@ -32,7 +32,7 @@ $(document).ready(function() {
 
         e.preventDefault();
 
-        if(inputValue == 0) {
+        if(inputValue.length < 3) {
             invalid.text('*please enter feelings')
         } else {
             introPrompt.slideUp(2000);
