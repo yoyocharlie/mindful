@@ -11,16 +11,20 @@ $(document).ready(function() {
         fetch('https://type.fit/api/quotes')
         .then((response) => response.json())
         .then((data) => {
-            let mappedData = data.map(obj=> obj.text);
-            let mappedQuote = mappedData.filter(function(text){
+            //let mappedData = data.map(obj=> obj);
+            let mappedQuote = data.filter(function(quote){
                 const inputValue = inputBar.val();
-                return text.includes(inputValue.toLowerCase());
+                return quote.text.includes(inputValue.toLowerCase());
             });
             let randomQuote = mappedQuote[Math.floor(Math.random() * mappedQuote.length)];
+            let quoteAuthor = randomQuote.author;
 
-            return randomQuote == undefined ? 
-            quoteSpace.html('It seems your feelings are too complex for our site. Try again :)')
-            : quoteSpace.html(`"${randomQuote}"`);
+            if(randomQuote == undefined){
+                quoteSpace.html('It seems your feelings are too complex for our site. Try again :)')
+            } else {
+                quoteSpace.html(`"${randomQuote.text}"`);
+                authors.html(`- ${quoteAuthor}`);
+            }
         })
         .catch((err) => console.log(err));
     }
