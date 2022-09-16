@@ -2,9 +2,6 @@
 
 html {
     background: linear-gradient(#164A41, #4D774E 30%, #9DC88D 70%);    
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     min-height: 100vh;
     min-width: 100vw;
 }
@@ -12,6 +9,9 @@ html {
 body {
     background-color: unset !important;
     min-height: 100vh;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .navbar {
