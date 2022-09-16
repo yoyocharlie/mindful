@@ -44,7 +44,7 @@ $(document).ready(function() {
             quoteSpace.removeClass('noDisplay');
             inputBar.fadeOut(2000);
             submit.fadeOut(2000);
-            invalid.fadeOut(500);
+            invalid.fadeOut(2000);
             generateQuote();
             quoteSpace.addClass('fadeIn');
             authors.addClass('fadeIn');
