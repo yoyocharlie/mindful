@@ -20,10 +20,14 @@ $(document).ready(function() {
             let quoteAuthor = randomQuote.author;
 
             if(randomQuote == undefined){
-                quoteSpace.html('It seems your feelings are too complex for our site. Try again :)')
+                quoteSpace.html('It seems your feelings are too complex for our site. Try again :)');
+            } else if(quoteAuthor == null){
+                quoteSpace.html(`"${randomQuote.text}"`);
+                authors.html('- Unknown')
             } else {
                 quoteSpace.html(`"${randomQuote.text}"`);
                 authors.html(`- ${quoteAuthor}`);
+                console.log(randomQuote);
             }
         })
         .catch((err) => console.log(err));
