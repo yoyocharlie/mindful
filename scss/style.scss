@@ -1,7 +1,7 @@
 @import './variables';
 
 html {
-    background: linear-gradient(0deg, rgb(250, 165, 108) 1%, rgba(168,184,226,1) 89%, rgba(148,187,233,1) 100%);
+    background: linear-gradient(#164A41, #4D774E 30%, #9DC88D 70%);    
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -17,7 +17,7 @@ body {
 .navbar {
     position: sticky !important;
     top: 0;
-    background: #8090c5;
+    background: #d69b3d;
     a {
     font-size: 25px;
     }

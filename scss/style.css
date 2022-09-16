@@ -16,7 +16,7 @@
   }
 }
 html {
-  background: linear-gradient(0deg, rgb(250, 165, 108) 1%, rgb(168, 184, 226) 89%, rgb(148, 187, 233) 100%);
+  background: linear-gradient(#164A41, #4D774E 30%, #9DC88D 70%);
   -webkit-animation: fadeInAnimation ease 3s;
           animation: fadeInAnimation ease 3s;
   -webkit-animation-iteration-count: 1;
@@ -36,7 +36,7 @@ body {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 0;
-  background: #8090c5;
+  background: #d69b3d;
 }
 .navbar a {
   font-size: 25px;
@@ -46,7 +46,7 @@ body {
 }
 
 header p {
-  box-shadow: 5px 5px 50px rgb(236, 175, 134);
+  box-shadow: 2px 2px 0px 2px #F1B24A;
   border-radius: 10px;
 }
 
@@ -63,7 +63,7 @@ header p {
 }
 
 #about {
-  box-shadow: 5px 5px 50px rgb(236, 175, 134);
+  box-shadow: 2px 2px 0px 2px #F1B24A;
   border-radius: 10px;
 }
 
