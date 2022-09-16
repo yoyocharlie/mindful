@@ -11,8 +11,8 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" id="logo" class="navbar-brand text-light ms-3 p-2">mindful.</a>
-        <a href="about.html" class="btn text-light me-3">about.</a>
+        <a href="index.html" id="logo" class="navbar-brand text-light ms-3 p-2" aria-label="logo">mindful.</a>
+        <a href="about.html" class="btn text-light me-3" aria-label="about">about.</a>
     </nav>
 
     <div class="container mt-5 d-flex justify-content-center flex-column">
@@ -27,13 +27,13 @@
             <div class="form-group row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
-                    <input class="form-control input-lg text-light" value="" id="inputBar" type="text" placeholder="I'm Feeling...">
+                    <input class="form-control input-lg text-light" value="" aria-label="Input Your Feeling" id="inputBar" type="text" placeholder="I'm Feeling...">
                 </div>
                 <div class="col-sm-2 mb-5"></div>
             </div>
             <div class="row">
                 <div class="col">
-                    <button id="submitBtn" href="#" class="btn btn-lg mt-5 mb-5 text-light bg-outline-line active">Submit</button>
+                    <button id="submitBtn" href="#" class="btn btn-lg mt-5 mb-5 text-light bg-outline-line active" aria-label="Submit Feeling">Submit</button>
                     <div id="invalid"></div>
                 </div>
             </div>
