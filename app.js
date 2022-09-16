@@ -17,17 +17,16 @@ $(document).ready(function() {
                 return quote.text.includes(inputValue.toLowerCase());
             });
             let randomQuote = mappedQuote[Math.floor(Math.random() * mappedQuote.length)];
-            let quoteAuthor = randomQuote.author;
+            //let quoteAuthor = randomQuote.author;
 
             if(randomQuote == undefined){
                 quoteSpace.html('It seems your feelings are too complex for our site. Try again :)');
-            } else if(quoteAuthor == null){
+            } else if(randomQuote.author == null){
                 quoteSpace.html(`"${randomQuote.text}"`);
                 authors.html('- Unknown')
             } else {
                 quoteSpace.html(`"${randomQuote.text}"`);
-                authors.html(`- ${quoteAuthor}`);
-                console.log(randomQuote);
+                authors.html(`- ${randomQuote.author}`);
             }
         })
         .catch((err) => console.log(err));
